@@ -52,3 +52,5 @@ name: 📥 Get dependencies
       
 name: ✅ Run tests
       run: flutter test --coverage
+
+.apk artifacts/
