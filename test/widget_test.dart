@@ -11,6 +11,19 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:plusandminus/main.dart';
 
 void main() {
+  testWidgets('Counter reaches 3 after three increments', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(const MyApp());
+
+    for (var i = 0; i < 3; i++) {
+      await tester.tap(find.byIcon(Icons.add));
+      await tester.pump();
+    }
+
+    expect(find.text('3'), findsOneWidget);
+  });
+
   testWidgets('Counter increments, decrements, and resets', (
     WidgetTester tester,
   ) async {
